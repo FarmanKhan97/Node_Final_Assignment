@@ -1,0 +1,16 @@
+{{#each errors}}
+  <div class="col-md-4">{{text}}</div>
+{{else}}
+{{/each}}
+
+<div class="card card-body">
+  <h3>BandTodo Name </h3>
+  <form action="/bands" method="post">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input class="form-control" name="title" type="text" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

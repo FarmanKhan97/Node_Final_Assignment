@@ -1,0 +1,12 @@
+{{#each bands}}
+  <div class="card card-body mb-2">
+    <h4>{{title}}</h4>
+    <a class="btn btn-primary mb-2" href="/bands/edit/{{id}}">Edit</a>
+    <form method="post" action="/bands/{{id}}?_method=DELETE">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-info" value="Delete">
+    </form>
+  </div>
+{{else}}
+  <p>No Bands listed</p>
+{{/each}}
